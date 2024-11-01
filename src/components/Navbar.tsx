@@ -4,9 +4,9 @@ import Image from 'next/image';
 const Navbar = () => {
   return (
     <div className='flex items-center justify-between p-4'>
-      <div className="hidden md:flex rounded-full gap-2 text-xs px-2 py-1 ring-[1.5px] ring-gray-300">
-        <Image src='/search.png' alt='' width={10} height={10} />
-        <input type="text" className="outline-none bg-transparent w-[200px] p-2" placeholder='Search...'/>
+      <div className='hidden md:flex items-center gap-2 text-xs rounded-full ring-[1.5px] ring-gray-300 px-2'>
+        <Image src="/search.png" alt="" width={14} height={14}/>
+        <input type="text" placeholder="Search..." className="w-[200px] p-2 bg-transparent outline-none"/>
       </div>
 
       <div className="flex items-center gap-4 justify-end w-full">
