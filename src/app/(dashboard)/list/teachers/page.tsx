@@ -58,7 +58,7 @@ const columns = [
 
 const TeacherList = () => {
 
-  const renderRow = (item: Teacher) => {
+  const renderRow = (item: Teacher) => (
     <tr
     key={item.id}
     className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
@@ -97,7 +97,7 @@ const TeacherList = () => {
       </div>
     </td>
   </tr>
-  }
+  )
 
   return (
     <div className='bg-white p-4 rounded-md flex-1 m-4 mt-0'>
