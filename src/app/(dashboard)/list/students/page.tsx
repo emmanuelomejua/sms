@@ -53,7 +53,7 @@ const StudentListPage = () => {
   const renderRow = (item: Student) => (
     <tr
       key={item.id}
-      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
+      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purpleLight"
     >
       <td className="flex items-center gap-4 p-4">
         <Image
@@ -74,7 +74,7 @@ const StudentListPage = () => {
       <td className="hidden md:table-cell">{item.address}</td>
       <td>
         <div className="flex items-center gap-2">
-          <Link href={`/list/teachers/${item.id}`}>
+          <Link href={`/list/students/${item.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky">
               <Image src="/view.png" alt="" width={16} height={16} />
             </button>
