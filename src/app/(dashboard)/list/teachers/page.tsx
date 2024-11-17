@@ -1,4 +1,5 @@
 import Pagination from '@/components/Pagination';
+import FormModal from '@/components/FormModal';
 import Table from '@/components/Table';
 import TableSearch from '@/components/TableSearch';
 import { role, teachersData } from '@/lib/data';
@@ -89,11 +90,8 @@ const TeacherList = () => {
           </button>
         </Link>
         {role === "admin" && (
-          <button className="w-7 h-7 flex items-center justify-center rounded-full bg-vPurple">
-            <Image src="/delete.png" alt="" width={16} height={16} />
-          </button>
+          <FormModal table="teacher" type="delete" id={item.id}/> 
         )}
-          {/* // <FormModal table="teacher" type="delete" id={item.id}/> */}
       </div>
     </td>
   </tr>
@@ -113,9 +111,9 @@ const TeacherList = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-vYellow">
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-vYellow">
-              <Image src="/plus.png" alt="" width={14} height={14} />
-            </button>
+            { role === 'admin' && (
+                <FormModal table="teacher" type="create" /> 
+            )}
         </div>
       </div>
     </div>
