@@ -11,7 +11,7 @@ interface ITable{
     data: any[]
 }
 
-const Table: FC<ITable> = ({ columns,renderRow,data}) => {
+const Table: FC<ITable> = ({ columns,renderRow, data}) => {
   return (
     <table className="w-full mt-4">
         <thead>
